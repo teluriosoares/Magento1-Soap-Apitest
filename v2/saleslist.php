@@ -25,7 +25,7 @@ $filter = array('filter' => array(array('key' => 'state', 'value' => 'complete')
 $result = $client->salesOrderList($session, $filter);
 
 var_dump ($result);
-   
+
 
 
 
@@ -35,11 +35,11 @@ var_dump ($result);
 
 /*
 // URL para acesso à API SOAP (Altere para a URL de sua loja)
-$client = new SoapClient('http://testeapi.agilex.jn2/api/v2_soap/?wsdl');
+$client = new SoapClient('http://sualoja.com.br/api/v2_soap/?wsdl');
 
 // If some stuff requires API authentication,
 // then get a session token
-$session = $client->login('testejn2', 'teste123123');
+$session = $client->login('user', 'password');
 
 $filter = array(array(
     'filters' => array(// Para filtros simples

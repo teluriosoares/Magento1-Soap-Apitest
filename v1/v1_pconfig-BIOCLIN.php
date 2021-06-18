@@ -1,9 +1,9 @@
 <?php
 
 //SOAP V1
-$client = new SoapClient('http://bioclin.agilex.jn2.xyz/api/soap/?wsdl');
+$client = new SoapClient('https://sualoja.com/api/soap/?wsdl');
 
-$session = $client->login('jn2', '234yhuhwns33'); //chave definida no admin
+$session = $client->login('user', 'password'); //chave definida no admin
 
 /* grupo de atributos default*/
 $attr_g = 15;
@@ -42,7 +42,7 @@ $client->call($session, 'catalog_product.create', array('simple', $attr_g, 'TEST
 	'visibility' => '1', // 1 => 'Not Visible Individually', 2 => 'Catalog', 3 => 'Search', 4 => 'Catalog, Search'
 	'price' => '208.7',
 	'guest_hide_price' => 1,
-	/*'additional_attributes' => array( 
+	/*'additional_attributes' => array(
 		'single_data' => array(
 			array(
 				'key' => 62,
@@ -81,4 +81,3 @@ $client->call($session, 'catalog_product_configurable.associateSimpleChildren', 
 
 
 var_dump ($result); //retorna a string 'success' ou a exception relacionada
-

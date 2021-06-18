@@ -9,8 +9,8 @@ var_dump($result->result);
 */
 
 
-$proxy = new SoapClient('https://testeapi.agilex.jn2.xyz/api/v2_soap/?wsdl');
-$sessionId = $proxy->login('testejn2', 'teste123123');
+$proxy = new SoapClient('https://sualoja.com/api/v2_soap/?wsdl'); //change url
+$sessionId = $proxy->login('user', 'password'); //change login and pwd if necessary
 $result = $proxy->catalogProductLinkAssign($sessionId, 'related', '194', '187');
 var_dump($result);
 

@@ -5,14 +5,14 @@
  */
 
 // Altere para a URL de sua loja
-$proxy = new SoapClient('http://testeapi.agilex.jn2.xyz/api/v2_soap/?wsdl');
+$proxy = new SoapClient('https://sualoja.com/api/v2_soap/?wsdl');
 
 // Informe seu usuário e senha para acessp à API
-$session = $proxy->login('testejn2', 'teste123123'); 
+$session = $proxy->login('user', 'password'); 
 
 
 $result = $proxy->catalogInventoryStockItemUpdate($session, 183, array(
-'qty' => '49', 
+'qty' => '49',
 'is_in_stock' => 1
 ));
 
